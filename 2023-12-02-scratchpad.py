@@ -76,4 +76,4 @@ with open("2023-12-02-puzzle-input") as file:
         
         countGameP2 += (redMax * blueMax * greenMax)
         
-print(countGameP2) # 406 - seems far too low. 
+print(countGameP2) # 406 - seems far too low. INDEED - TOO LOW
