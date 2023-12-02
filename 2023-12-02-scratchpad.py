@@ -51,14 +51,15 @@ print('----------------------------------')
 
 
 with open("2023-12-02-puzzle-input") as file:
-    sumOfTheGameIDs = 0
+
+    countGameP2 = 0
 
     for line in file:
-
-        countGameP2 = True
+        
         game, cubes = line.split(":")
+
         _, game = game.split()
-        redMax, greenMax, blueMax = 1, 1, 1
+        redMax, greenMax, blueMax = 0, 0, 0
 
         for sample in cubes.split(";"):
 
@@ -76,4 +77,4 @@ with open("2023-12-02-puzzle-input") as file:
         
         countGameP2 += (redMax * blueMax * greenMax)
         
-print(countGameP2) # 406 - seems far too low. INDEED - TOO LOW
+print(countGameP2) # 54699 = CORRECT
