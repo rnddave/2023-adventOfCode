@@ -7,7 +7,6 @@
 # I would read a fdile in different directions)
 
 #FILE = r"2023-12-03-puzzle-input"
-#import sys
 
 with open("2023-12-03-puzzle-input", 'r')  as file:
     
@@ -19,12 +18,12 @@ with open("2023-12-03-puzzle-input", 'r')  as file:
 
         while idx < len(line):
 
-            print('[1] did I get here?', line) # seem to be going in a loop for line 1 of the input
+            #print('[1] did I get here?', line) # seem to be going in a loop for line 1 of the input
 
             # finding the numbers
             if line[idx].isdigit():
 
-                print('[2] did I get here?') # I did NOT get here
+                #print('[2] did I get here?') # I did NOT get here
 
                 holder = 0
                 startindex = idx
@@ -80,8 +79,12 @@ with open("2023-12-03-puzzle-input", 'r')  as file:
 
                     if symbolHere:
                         MissingPart += holder
+
                 idx += 1
+
             else:
                 idx += 1
 
     print("Sum of part numbers = " + str(MissingPart)) # 45676 = WRONG  = too low - VERY TOO LOW
+
+### NOPE - even with many tips, I am very lost, this AoC challenge really pulls the mat from under your self confidence! 
