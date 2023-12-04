@@ -1,3 +1,4 @@
+# PART 1
 # read a line
 # split at the | (pipe)
 # compare LEFT | RIGHT 
@@ -12,7 +13,7 @@ def convert_to_int(array):
 # Open the file for reading
 with open("2023-12-04-puzzle-input", "r") as file:
 
-    # I forgot about the card x: - need to discard this bit
+    # I forgot about the [card x:] - need to discard this bit
     lineInput = [line.strip().split(": ")[1] for line in file.readlines()]
     
     # two parts (split at the pipe)
@@ -43,13 +44,13 @@ for (aSideNumbers, bSideNumbers) in lineInput:
     # Update the [total points] based on the [calculated points]
     totalPoints += 2 ** (lineInputPoints-1) if lineInputPoints > 0 else 0
 
-
     # PART 2 - NEW SCRATCH CARDS
     # Update the number of scratchcards based on points
     howMany = numberOfCardsForMe
 
     for card in range(lineInputPoints):
         cardInitialValue[howMany+card] += 1 * cardInitialValue[numberOfCardsForMe-1]
+        #nprint(sum(cardInitialValue))
 
     # Update the number of [winning cards]
     numberOfCardsForMe += 1 
@@ -71,5 +72,5 @@ print("Part One = ", totalPoints ) # Part One =  25231 = CORRECT
 # print(part2) # 22578 = WRONG = TOO LOW
 
 # output PART 2 attempt 4 
-print(f"Part 2 = {sum(numberOfCardsForMe)}")
+# print(f"Part 2 = {sum(range(numberOfCardsForMe))}") # AHHHH I realise I am trying to print the wrong value
 
