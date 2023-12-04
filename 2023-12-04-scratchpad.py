@@ -10,7 +10,7 @@ def convert_to_int(array):
     return list(map(int, array))
 
 # Initialise variables
-lineInputPoints = 0
+# lineInputPoints = 0 ( this needs to be in the FOR loop )
 totalPoints = 0
 
 # Open the file for reading
@@ -25,6 +25,7 @@ with open("2023-12-04-puzzle-input", "r") as file:
 
 # Loop through each pair of winning_numbers and your_numbers
 for (aSideNumbers, bSideNumbers) in lineInput:
+    lineInputPoints = 0
     # Reddit suggest function to do this bit because mine does not work
     # aSideNumbers = list(map(int(winning_numbers))) # TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
     aSideNumbers = convert_to_int(aSideNumbers) 
@@ -37,5 +38,8 @@ for (aSideNumbers, bSideNumbers) in lineInput:
         # Update the total points based on the calculated points
     totalPoints += 2 ** (lineInputPoints-1) if lineInputPoints > 0 else 0
 
-# Print the total points
-print(f"Output Part One {totalPoints}") # 27541513926103116840762798990565337283274206650153010829433225163847466280910629336816668583077582891504992220256602857508206504525461214505452075123715269136811634286446707081247266105496960846738476439335937837978128974391618068303142449192777205034177200525177179960879937658883376884613632
+# output attempt 1
+# print(f"Output Part One {totalPoints}") # 27541513926103116840762798990565337283274206650153010829433225163847466280910629336816668583077582891504992220256602857508206504525461214505452075123715269136811634286446707081247266105496960846738476439335937837978128974391618068303142449192777205034177200525177179960879937658883376884613632
+
+# output attempt 2
+print("Part One = ", totalPoints ) # Part One =  25231 = CORRECT
