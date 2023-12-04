@@ -74,3 +74,5 @@ print("Part One = ", totalPoints ) # Part One =  25231 = CORRECT
 # output PART 2 attempt 4 
 # print(f"Part 2 = {sum(range(numberOfCardsForMe))}") # AHHHH I realise I am trying to print the wrong value
 
+# output PART 2 - attempt 5
+print("Part Two = ", sum(cardInitialValue)) # 9721255 = CORRECT 
