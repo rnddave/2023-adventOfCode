@@ -64,30 +64,30 @@ def day5PartTw0(seeds, maps):
         newRedditRange = []
 
         for fiveGoldenRings in values:
-            d,s,r = fiveGoldenRings.split()
-            d,s,r = int(d), int(s), int(r)
+            destinationRange, sourceRange, rangeDifference = fiveGoldenRings.split()
+            destinationRange, sourceRange, rangeDifference = int(destinationRange), int(sourceRange), int(rangeDifference)
 
             for element in range(len(seeds)):
 
-                if s <= seeds[element] < s+r:
-                    doppleGanger[element] += d - s
+                if sourceRange <= seeds[element] < sourceRange + rangeDifference:
+                    doppleGanger[element] += destinationRange - sourceRange
 
-            e = s + r - 1
+            fiveGR = sourceRange + rangeDifference - 1
 
             theNewNewRedditList = []
 
             for spread in redditRange:
 
-                if onThe5thDayOfXmas(s, e, spread[0], spread[1]):
-                    c1 = max(s,spread[0])
-                    c2 = min(e,spread[1])
-                    newRedditRange.append((c1 + d - s, c2 + d - s))
+                if onThe5thDayOfXmas(sourceRange, fiveGR, spread[0], spread[1]):
+                    wuEe = max(sourceRange, spread[0])
+                    wuEr = min(fiveGR, spread[1])
+                    newRedditRange.append((wuEe + destinationRange - sourceRange, wuEr + destinationRange - sourceRange))
 
-                    if spread[0] < c1:
-                        theNewNewRedditList.append((spread[0],c1-1))
+                    if spread[0] < wuEe:
+                        theNewNewRedditList.append((spread[0], wuEe-1))
 
-                    if spread[1] > c2:
-                        theNewNewRedditList.append((c2+1,spread[1]))
+                    if spread[1] > wuEr:
+                        theNewNewRedditList.append((wuEr + 1, spread[1]))
 
                 else:
                     theNewNewRedditList.append(spread)
