@@ -39,11 +39,11 @@ for theNumber in sixGeese_A_Laying:
     theAnswer *= theNumber
 
 # Day 6 / part 1
-# print("Part One: ", theAnswer) # 781200 = correct
+print("Part One: ", theAnswer) # 781200 = correct
 
 theAnswerP2 = onTheSixthDayOfChristmasPartTwo(timeP2, distanceP2)
 
 # Day 6 / Part 2
-# print("Part Two: ", theAnswerP2) # 49240091 = correct
-# interestingly, there was a delay when running Part Two and I thought I'd created an infinite loop, guess I should re-run with the timer in place: 
+print("Part Two: ", theAnswerP2) # 49240091 = correct
+# interestingly, there was a delay when running Part Two and I thought I'd created an infinite loop
 
